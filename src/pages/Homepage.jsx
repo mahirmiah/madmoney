@@ -1,5 +1,5 @@
 
-import {Nav,Navbar, Button, Stack } from "react-bootstrap"
+import {Nav,Navbar, Button, Stack,Alert } from "react-bootstrap"
 import Container from "react-bootstrap/Container"
 import AddBudgetModal from "../components/AddBudgetModal"
 import AddExpenseModal from "../components/AddExpenseModal"
@@ -12,6 +12,9 @@ import { UNCATEGORIZED_BUDGET_ID, useBudgets } from "../contexts/BudgetsContext"
 // import { BudgetsProvider } from "../contexts/BudgetsContext"
 import { getAuth, updateProfile } from 'firebase/auth'
 import {useNavigate,Link} from 'react-router-dom'
+import Toast from 'react-bootstrap/Toast'
+import NavBarCustom from "../components/NavBarCustom"
+
 
 
 
@@ -35,38 +38,41 @@ function Homepage() {
   const onLogout = () => {
     auth.signOut()
     navigate('/sign-in')
-
   } 
+
 
   function openAddExpenseModal(budgetId) {
     setShowAddExpenseModal(true)
     setAddExpenseModalBudgetId(budgetId)
   } 
 
+  
   return (
     <> 
+ <NavBarCustom></NavBarCustom>
+
+  {[
    
-    <Navbar bg="dark" variant="dark" >
-    <Container>
-      <Navbar.Brand href="#home">
-        <img
-          alt=""
-          src="logo.svg"
-          width="30"
-          height="30"
-          className="d-inline-block align-top"
-        />{' '}
-      madmoney
-      </Navbar.Brand>
-      <Nav className="ms-auto">
-      <Nav.Link href="#connect">Connect</Nav.Link>
-      <Nav.Link href="#help">Help</Nav.Link>
-      <Button type='button' className='logOut' onClick={onLogout}>Log Out </Button>
-      
-    </Nav>
-    </Container>
-  </Navbar>
-<Container className="mt-3"> Welcome back, {name}</Container>
+    'secondary',
+   
+  ].map((variant) => (
+    <Alert key={variant} variant={variant}>
+     <div align='center'>
+     Welcome back, {name}
+
+     </div>
+    </Alert>
+  ))}
+<Container ms-auto>
+<Toast >
+  <Toast.Header closeButton='true'>
+    <img src="holder.js/20x20?text=%20" className="rounded me-2" alt="" />
+    <strong className="me-auto">Let's Budget!</strong>
+    
+  </Toast.Header>
+  <Toast.Body>The 'Add Budget' button creates a category to track expenses. After creating a category to budget, click 'Add Expense' to assign expenses to the category.</Toast.Body>
+  </Toast>
+</Container>
 
       <Container className="my-4">
         

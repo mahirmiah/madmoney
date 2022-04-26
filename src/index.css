@@ -25,6 +25,10 @@ button {
     outline: none;
     border: none;
 }
+.btn-customlink {
+    color: white;
+    background-color: #00cc66;
+}
 
 .signUpImg{
     text-align: center;

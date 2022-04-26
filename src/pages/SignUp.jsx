@@ -12,7 +12,7 @@ import OAuth from '../components/OAuth'
 import { ReactComponent as ArrowRightIcon } from '../assets/svg/keyboardArrowRightIcon.svg'
 import visibilityIcon from '../assets/svg/visibilityIcon.svg'
 import "../index.css"
-import { ToastContainer } from 'react-toastify'
+// import { ToastContainer } from 'react-toastify'
 
 
 function SignUp() {
