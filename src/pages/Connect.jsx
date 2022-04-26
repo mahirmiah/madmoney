@@ -1,9 +1,13 @@
 
-import React, { useRef } from 'react';
+import React, {useState, useRef } from 'react';
 import emailjs from '@emailjs/browser';
-import {Form,Button, Container,} from 'react-bootstrap'
+import {Form,Button,Col,Row, Container, Toast, Stack} from 'react-bootstrap'
 import { ToastContainer, toast } from 'react-toastify';
 import NavBarCustom from '../components/NavBarCustom';
+import message from '../assets/svg/message.svg'
+import mail from '../assets/svg/mail.svg'
+
+
 
 function Connect () {
     function refreshPage() {
@@ -21,18 +25,36 @@ function Connect () {
       }, (error) => {
           console.log(error.text);
       });
+      form.current.reset()
   };
+
+ 
+
 
 
 
   return (
+  
   <>
+  <NavBarCustom></NavBarCustom>
+
+<Toast></Toast>
+    <Container className='ms-auto mt-1'>
 
 
-<NavBarCustom></NavBarCustom>
+   
+          <div className='connectImg'  >
+          {/* <Stack className='messageImg' direction="horizontal" gap={3}> */}
+            <img src={mail} height='140' width='120' />
+            <span> &nbsp;&nbsp;&nbsp;</span>
+            
+            <img src={message} height='140' width='120' />
+            {/* </Stack> */}
+          </div >
+    
+       
+          
 
-
-  <Container className='ms-auto m-5'>
   <Form ref={form} onSubmit={sendEmail}>
 
   <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
@@ -49,10 +71,10 @@ function Connect () {
 
   <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
     <Form.Label>Message</Form.Label>
-    <Form.Control as="textarea" rows={3} name='message'/>
+    <Form.Control as="textarea" rows={2} name='message'/>
   </Form.Group>
 
-  <Button variant="primary" type="submit" onClick={refreshPage}>
+  <Button variant="primary" type="submit" onClick={sendEmail}>
     Submit
   </Button >
 </Form>

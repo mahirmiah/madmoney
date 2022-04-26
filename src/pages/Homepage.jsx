@@ -1,5 +1,5 @@
-
-import {Nav,Navbar, Button, Stack,Alert } from "react-bootstrap"
+// import { BudgetsProvider } from "../contexts/BudgetsContext"
+import {Navbar, Button, Stack,Alert } from "react-bootstrap"
 import Container from "react-bootstrap/Container"
 import AddBudgetModal from "../components/AddBudgetModal"
 import AddExpenseModal from "../components/AddExpenseModal"
@@ -7,11 +7,10 @@ import ViewExpensesModal from "../components/ViewExpensesModal"
 import BudgetCard from "../components/BudgetCard"
 import UncategorizedBudgetCard from "../components/UncategorizedBudgetCard"
 import TotalBudgetCard from "../components/TotalBudgetCard"
-import { useState,useEffect } from "react"
+import { useState, } from "react"
 import { UNCATEGORIZED_BUDGET_ID, useBudgets } from "../contexts/BudgetsContext"
-// import { BudgetsProvider } from "../contexts/BudgetsContext"
-import { getAuth, updateProfile } from 'firebase/auth'
-import {useNavigate,Link} from 'react-router-dom'
+import { getAuth,  } from 'firebase/auth'
+import {useNavigate,} from 'react-router-dom'
 import Toast from 'react-bootstrap/Toast'
 import NavBarCustom from "../components/NavBarCustom"
 
@@ -50,6 +49,7 @@ function Homepage() {
   return (
     <> 
  <NavBarCustom></NavBarCustom>
+ 
 
   {[
    

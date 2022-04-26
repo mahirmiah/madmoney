@@ -25,13 +25,10 @@ button {
     outline: none;
     border: none;
 }
-.btn-customlink {
-    color: white;
-    background-color: #00cc66;
-}
-
-.signUpImg{
+/*  */
+.connectImg{
     text-align: center;
+   
 }
 
 .input,
@@ -306,6 +303,7 @@ button {
     border-radius: 50%;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
 }
+
 
 .socialIconImg {
     width: 100%;

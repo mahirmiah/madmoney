@@ -1,9 +1,9 @@
 import React from 'react'
-import { useState,useEffect } from "react"
-import {Nav,Navbar, Button, Stack,Alert } from "react-bootstrap"
+import { useState } from "react"
+import {Nav,Navbar, Button} from "react-bootstrap"
 import Container from "react-bootstrap/Container"
-import { getAuth, updateProfile } from 'firebase/auth'
-import {useNavigate,Link} from 'react-router-dom' 
+import { getAuth,  } from 'firebase/auth'
+import {useNavigate} from 'react-router-dom' 
 
 export default NavBarCustom
 
@@ -43,18 +43,12 @@ function NavBarCustom() {
           height="30"
           className="d-inline-block align-top"
         />{' '}
-      madmoney
+        madmoney
       </Navbar.Brand>
       <Nav className="ms-auto">
-
-      {/* <Button variant="customlink" onClick={onConnect}>Link</Button>
-        <Nav.Link className='custom-button'onClick='onConnect' >
-          Connect
-        </Nav.Link> */}
       <Nav.Link onClick={onHome} href="">Home</Nav.Link>
       <Nav.Link onClick={onConnect} href="">Connect</Nav.Link>
-
-      <Button type='button' className='logOut' onClick={onLogout}>Log Out </Button>
+      <Button type='button' variant='primary' size='sm' onClick={onLogout}>Log Out </Button>
  
 
 
