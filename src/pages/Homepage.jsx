@@ -1,5 +1,7 @@
 // import { BudgetsProvider } from "../contexts/BudgetsContext"
-import {Navbar, Button, Stack,Alert } from "react-bootstrap"
+import {Navbar, Button, Stack,Alert, } from "react-bootstrap"
+
+
 import Container from "react-bootstrap/Container"
 import AddBudgetModal from "../components/AddBudgetModal"
 import AddExpenseModal from "../components/AddExpenseModal"
@@ -13,6 +15,7 @@ import { getAuth,  } from 'firebase/auth'
 import {useNavigate,} from 'react-router-dom'
 import Toast from 'react-bootstrap/Toast'
 import NavBarCustom from "../components/NavBarCustom"
+import IntroToast from "../components/IntroToast"
 
 
 
@@ -63,16 +66,6 @@ function Homepage() {
      </div>
     </Alert>
   ))}
-<Container ms-auto>
-<Toast >
-  <Toast.Header closeButton='true'>
-    <img src="holder.js/20x20?text=%20" className="rounded me-2" alt="" />
-    <strong className="me-auto">Let's Budget!</strong>
-    
-  </Toast.Header>
-  <Toast.Body>The 'Add Budget' button creates a category to track expenses. After creating a category to budget, click 'Add Expense' to assign expenses to the category.</Toast.Body>
-  </Toast>
-</Container>
 
       <Container className="my-4">
         
@@ -125,15 +118,18 @@ function Homepage() {
         handleClose={() => setViewExpensesModalBudgetId()}
       />
     
+    <IntroToast></IntroToast>
         
-    <Navbar bg="dark" variant="dark" fixed="bottom" className=" mt-5">
+    <Navbar bg="grey" variant="light" fixed="bottom" className=" mt-5">
        <Stack direction='horizontal' gap={2} className=" mx-auto" > 
           <Button variant="primary"  onClick={() => setShowAddBudgetModal(true)}> Add Budget </Button>
-          <Button variant="danger"  onClick={openAddExpenseModal}> Add an Expense </Button>
+          <Button variant="secondary"  onClick={openAddExpenseModal}> Add an Expense </Button>
         </Stack>
-    </Navbar>
-  
+    </Navbar> 
 
+  
+    
+  
 
     </>
   )

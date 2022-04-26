@@ -47,6 +47,7 @@ function SignIn() {
 
   return (
     <>
+    <body>
       <div className='pageContainer'>
         <header>
           <p className='pageHeader'>Welcome Back!</p>
@@ -98,6 +99,7 @@ function SignIn() {
           Sign Up Instead
         </Link>
       </div>
+      </body>
     </>
   )
 }

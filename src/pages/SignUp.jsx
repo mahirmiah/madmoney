@@ -67,10 +67,10 @@ function SignUp() {
     <>
       <div className='pageContainer'>
         <header >
-          <div className='signUpImg' text-align='center'>
+          {/* <div className='signUpImg' text-align='center'>
             <img src={require('../assets/jpg/savings2.png')} height='80' width='100' />
 
-          </div >
+          </div > */}
     
           <p className='pageHeader' >madmoney</p>
           
