@@ -1,9 +1,13 @@
+import React, {useState, useRef } from 'react';
+import {Form,Button,Col,Row, Container, Toast, Stack} from 'react-bootstrap'
+import Connect from '../pages/Connect'
+
 function Example() {
   const [show, setShow] = useState(false);
 
   return (
     <Row>
-      <Col xs={6}>
+      <Col xs={8}>
         <Toast onClose={() => setShow(false)} show={show} delay={3000} autohide>
           <Toast.Header>
             <img
@@ -12,16 +16,19 @@ function Example() {
               alt=""
             />
             <strong className="me-auto">Bootstrap</strong>
-            <small>11 mins ago</small>
+            <small>Few seconds ago</small>
           </Toast.Header>
-          <Toast.Body>Woohoo, you're reading this text in a Toast!</Toast.Body>
+          <Toast.Body>Success! You have sent an email.</Toast.Body>
         </Toast>
       </Col>
       <Col xs={6}>
-        <Button onClick={() => setShow(true)}>Show Toast</Button>
+        <Button variant='primary' type='submit' onClick={(sendEmail) => setShow(true)}>Submit</Button>
+
       </Col>
     </Row>
   );
 }
 
-render(<Example />);
+// render(<Example />);
+
+export default Example

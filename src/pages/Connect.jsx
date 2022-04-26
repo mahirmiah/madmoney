@@ -1,8 +1,11 @@
 
 import React, {useState, useRef } from 'react';
-import emailjs from '@emailjs/browser';
 import {Form,Button,Col,Row, Container, Toast, Stack} from 'react-bootstrap'
+
+import emailjs from '@emailjs/browser';
 import { ToastContainer, toast } from 'react-toastify';
+import Example from '../components/Example'
+
 import NavBarCustom from '../components/NavBarCustom';
 import message from '../assets/svg/message.svg'
 import mail from '../assets/svg/mail.svg'
@@ -37,8 +40,6 @@ function Connect () {
   
   <>
   <NavBarCustom></NavBarCustom>
-
-<Toast></Toast>
     <Container className='ms-auto mt-1'>
 
 
@@ -73,10 +74,8 @@ function Connect () {
     <Form.Label>Message</Form.Label>
     <Form.Control as="textarea" rows={2} name='message'/>
   </Form.Group>
-
-  <Button variant="primary" type="submit" onClick={sendEmail}>
-    Submit
-  </Button >
+    <Example></Example>
+  {/* <Button variant="primary" type="submit" onClick={sendEmail}>Submit</Button > */}
 </Form>
 </Container>
 
