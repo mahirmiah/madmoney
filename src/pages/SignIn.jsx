@@ -6,6 +6,13 @@ import OAuth from '../components/OAuth'
 import { ReactComponent as ArrowRightIcon } from '../assets/svg/keyboardArrowRightIcon.svg'
 import visibilityIcon from '../assets/svg/visibilityIcon.svg'
 import { ToastContainer } from 'react-toastify'
+import mainlogo from '../assets/jpg/madmoneylogo.png'
+import mainlogo2 from '../assets/jpg/madmoneylogo2.png'
+
+import savings from '../assets/svg/savings.svg'
+import {Form,Button,Col,Row, Container, Toast, Stack} from 'react-bootstrap'
+
+
 
 
 function SignIn() {
@@ -49,9 +56,16 @@ function SignIn() {
     <>
     <body>
       <div className='pageContainer'>
-        <header>
-          <p className='pageHeader'>Welcome Back!</p>
-        </header>
+        
+          <div className='connectImg'  >
+          {/* <Stack className='messageImg' direction="horizontal" gap={3}>  */}
+            <img src={savings} height='140' width='120' />
+            {/* <span
+            > &nbsp;&nbsp;&nbsp;</span> */}
+            
+            {/* <img src={mainlogo2} height='90' width='110' /> */}
+             {/* </Stack> */}
+          </div >
 
         <form onSubmit={onSubmit}>
           <input

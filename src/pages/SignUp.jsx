@@ -12,6 +12,10 @@ import OAuth from '../components/OAuth'
 import { ReactComponent as ArrowRightIcon } from '../assets/svg/keyboardArrowRightIcon.svg'
 import visibilityIcon from '../assets/svg/visibilityIcon.svg'
 import "../index.css"
+import {Form,Button,Col,Row, Container, Toast, Stack} from 'react-bootstrap'
+
+import message from '../assets/svg/message.svg'
+import mail from '../assets/svg/mail.svg'
 // import { ToastContainer } from 'react-toastify'
 
 
