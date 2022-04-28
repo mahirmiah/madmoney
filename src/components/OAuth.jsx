@@ -4,6 +4,8 @@ import { doc, setDoc, getDoc, serverTimestamp } from 'firebase/firestore'
 import { db } from '../firebase.config'
 import { toast } from 'react-toastify'
 import googleIcon from '../assets/svg/googleIcon.svg'
+import savings from '../assets/svg/savings.svg'
+
 
 function OAuth() {
   const navigate = useNavigate()
@@ -35,12 +37,25 @@ function OAuth() {
   }
 
   return (
+    
+   <>
+
+
+
+   
+
+      
     <div className='socialLogin'>
+      
+
       <p>Sign {location.pathname === '/sign-up' ? 'up' : 'in'} with </p>
       <button className='socialIconDiv' onClick={onGoogleClick}>
         <img className='socialIconImg' src={googleIcon} alt='google' />
       </button>
+      
+
     </div>
+    </>
   )
 }
 

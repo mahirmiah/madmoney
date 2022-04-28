@@ -48,11 +48,7 @@ function NavBarCustom() {
       <Nav className="ms-auto">
       <Nav.Link onClick={onHome} href="">Home</Nav.Link>
       <Nav.Link onClick={onConnect} href="">Connect</Nav.Link>
-      <Button type='button' variant='primary' size='sm' onClick={onLogout}>Log Out </Button>
- 
-
-
-      
+      <Button type='button' variant='primary' size='sm' onClick={onLogout}>Log Out </Button>      
     </Nav>
     </Container>
   </Navbar>

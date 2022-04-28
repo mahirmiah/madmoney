@@ -8,7 +8,6 @@ import visibilityIcon from '../assets/svg/visibilityIcon.svg'
 import { ToastContainer } from 'react-toastify'
 import mainlogo from '../assets/jpg/madmoneylogo.png'
 import mainlogo2 from '../assets/jpg/madmoneylogo2.png'
-
 import savings from '../assets/svg/savings.svg'
 import {Form,Button,Col,Row, Container, Toast, Stack} from 'react-bootstrap'
 
@@ -56,15 +55,16 @@ function SignIn() {
     <>
     <body>
       <div className='pageContainer'>
-        
+        {/* <div> */}
+  
+  
+  {/* </div>    */}
           <div className='connectImg'  >
-          {/* <Stack className='messageImg' direction="horizontal" gap={3}>  */}
-            <img src={savings} height='140' width='120' />
-            {/* <span
-            > &nbsp;&nbsp;&nbsp;</span> */}
-            
-            {/* <img src={mainlogo2} height='90' width='110' /> */}
-             {/* </Stack> */}
+            {/* <img className='savingsImgOAuth' src={savings} height='80' width='100' /> */}
+
+            <img src={mainlogo2} height='80' width='100' />
+
+            <p className='signInText'>Sign In</p>
           </div >
 
         <form onSubmit={onSubmit}>
@@ -95,12 +95,9 @@ function SignIn() {
             />
           </div>
 
-          <Link to='/forgot-password' className='forgotPasswordLink'>
-            Forgot Password
-          </Link>
-
+          
           <div className='signInBar'>
-            <p className='signInText'>Sign In</p>
+            
             <button className='signInButton'>
               <ArrowRightIcon fill='#ffffff' width='34px' height='34px' />
             </button>
@@ -108,10 +105,14 @@ function SignIn() {
         </form>
 
         <OAuth />
-
         <Link to='/sign-up' className='registerLink '>
           Sign Up Instead
         </Link>
+          <Link to='/forgot-password' className='forgotPasswordLink'>
+            Forgot Password
+          </Link>
+
+        
       </div>
       </body>
     </>

@@ -1,7 +1,6 @@
 // import { BudgetsProvider } from "../contexts/BudgetsContext"
 import {Navbar, Button, Stack,Alert, } from "react-bootstrap"
-
-
+import ChatBot from "../components/ChatBot"
 import Container from "react-bootstrap/Container"
 import AddBudgetModal from "../components/AddBudgetModal"
 import AddExpenseModal from "../components/AddExpenseModal"
@@ -117,7 +116,7 @@ function Homepage() {
         budgetId={viewExpensesModalBudgetId}
         handleClose={() => setViewExpensesModalBudgetId()}
       />
-    
+    {/* <ChatBot></ChatBot> */}
     <IntroToast></IntroToast>
         
     <Navbar bg="grey" variant="light" fixed="bottom" className=" mt-5">

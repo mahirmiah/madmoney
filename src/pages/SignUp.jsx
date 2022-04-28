@@ -13,10 +13,8 @@ import { ReactComponent as ArrowRightIcon } from '../assets/svg/keyboardArrowRig
 import visibilityIcon from '../assets/svg/visibilityIcon.svg'
 import "../index.css"
 import {Form,Button,Col,Row, Container, Toast, Stack} from 'react-bootstrap'
+import mainlogo2 from '../assets/jpg/madmoneylogo2.png'
 
-import message from '../assets/svg/message.svg'
-import mail from '../assets/svg/mail.svg'
-// import { ToastContainer } from 'react-toastify'
 
 
 function SignUp() {
@@ -70,15 +68,13 @@ function SignUp() {
   return (
     <>
       <div className='pageContainer'>
-        <header >
-          {/* <div className='signUpImg' text-align='center'>
-            <img src={require('../assets/jpg/savings2.png')} height='80' width='100' />
+       <div className='connectImg'>
+                    <img src={mainlogo2} height='80' width='100' />
 
-          </div > */}
-    
-          <p className='pageHeader' >madmoney</p>
-          
-        </header>
+      </div>
+      <header>
+        <p className='pageHeader'>Sign Up</p>
+      </header>
 
         <form
         onSubmit={onSubmit}
@@ -123,7 +119,7 @@ function SignUp() {
           </Link>
 
           <div className='signUpBar'>
-            <p className='signUpText'>Sign Up</p>
+            {/* <p className='signUpText'>Sign Up</p> */}
             <button className='signUpButton'>
               <ArrowRightIcon fill='#ffffff' width='34px' height='34px' />
             </button>
