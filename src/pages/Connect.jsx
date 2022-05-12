@@ -51,10 +51,8 @@ function Connect () {
             
             <img src={message} height='140' width='120' />
             {/* </Stack> */}
-          </div >
+          </div>
     
-       
-          
 
   <Form ref={form} onSubmit={sendEmail}>
 
